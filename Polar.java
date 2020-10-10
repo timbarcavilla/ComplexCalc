@@ -4,15 +4,14 @@ public class Polar{
     private double argument;
 
     public Polar(double newMod, double newArg){
-	modulus = newMod;
-	argument = newArg;
+        modulus = newMod;
+        argument = newArg;
     }
 
     public static double round100th(double x){
-	double n = x * 100;
-	double a = Math.round(n);
-	double retnum = a / (double)100;
-	return retnum;
+        double n = x * 100;
+        double a = Math.round(n);
+        return a / (double)100;
     }
 
     public String toString(){
@@ -26,9 +25,8 @@ public class Polar{
 
     public Complex rectConverter(){
         double a = getMod() * Math.cos(getArg());
-	double b = getMod() * Math.sin(getArg());
-	Complex retnum = new Complex(a,b);
-	return retnum;
+	    double b = getMod() * Math.sin(getArg());
+        return new Complex(a,b);
     }
 
    
